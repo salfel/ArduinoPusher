@@ -156,7 +156,6 @@ websockets::PartialMessageCallback Pusher::onMessage() {
         deserializeJson(doc, message.data());
         String event = doc["event"].as<String>();
         String data = doc["data"].as<String>();
-        Serial.println(event);
         if (event == pusherEvents[Connected]) {
             StaticJsonDocument<100> _doc;
             deserializeJson(doc, data);
