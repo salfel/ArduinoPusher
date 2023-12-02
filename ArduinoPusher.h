@@ -83,6 +83,8 @@ struct PusherOptions {
     String appKey;
     String secret;
     String cluster;
+    String host;
+    String port;
 };
 
 class Pusher: public EventEmitter {

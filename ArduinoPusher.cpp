@@ -82,7 +82,12 @@ Pusher::Pusher(PusherOptions options) {
 }
 
 Connection* Pusher::connect() {
-    this->connection->connect("ws-" + this->options.cluster + ".pusher.com", 80, "/app/" + this->options.appKey + "?protocol=7&client=arduino-ArduinoPusher");
+    if (this->options.host && this->options.port) {
+        this->connection->connect(options.host + "/app/" + this->options.appKey + "?protocol=7&client=arduino-ArduinoPusher");
+    }
+    else {
+        this->connection->connect("ws-" + this->options.cluster + ".pusher.com", 80, "/app/" + this->options.appKey + "?protocol=7&client=arduino-ArduinoPusher");
+    }
     this->connection->changeState(ConnectionConnecting);
 
     this->connection->onMessage(this->onMessage());
