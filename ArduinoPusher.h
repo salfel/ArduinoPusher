@@ -61,14 +61,6 @@ class Channel: public EventEmitter {
         String name;
 };
 
-class PrivateChannel: public Channel {
-
-};
-
-class PresenceChannel: public PrivateChannel {
-
-};
-
 enum PusherEvents {
     Connected,
     Disconnected,
