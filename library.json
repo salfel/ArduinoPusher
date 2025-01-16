@@ -1,0 +1,21 @@
+{
+    "name": "ArduinoPusher",
+    "version": "0.0.1",
+    "description": "A Pusher Library for Arduino",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/salfel/ArduinoPusher.git"
+    },
+    "authors": [
+        {
+            "name": "Felix Salcher",
+            "email": "dev.felix.salcher@gmail.com",
+            "url": "https://github.com/salfel",
+            "maintainer": true
+        }
+    ],
+    "frameworks": "arduino",
+    "platforms": "ESP32",
+    "license": "MIT",
+}
