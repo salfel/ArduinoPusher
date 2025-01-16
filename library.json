@@ -17,5 +17,5 @@
     ],
     "frameworks": "arduino",
     "platforms": "ESP32",
-    "license": "MIT",
+    "license": "MIT"
 }
